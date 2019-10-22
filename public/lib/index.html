@@ -10,18 +10,17 @@
   <body>
     <div id="product-purchase-component"></div>
     <div id="product-reviews-component"></div>
-    <script src="/lib/react.development.js"></script>
-    <script src="/lib/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script src="http://localhost:4001/app.js"></script>
     <script src="http://localhost:4002/app.js"></script>
-    <!-- see: https://reactjs.org/docs/react-without-jsx.html -->
     <script>
       ReactDOM.render(
-        React.createElement(Purchase),
+        React.createElement(Purchase, null),
         document.getElementById('product-purchase-component')
       );
       ReactDOM.render(
-        React.createElement(Reviews),
+        React.createElement(Reviews, null),
         document.getElementById('product-reviews-component')
       );
     </script>
