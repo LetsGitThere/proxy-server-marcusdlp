@@ -12,7 +12,7 @@ app.use((req, res, next) => {
 });
 
 app.use(morgan('dev'));
-app.use("/:productId/reviews",express.static(path.join(__dirname, 'lib')));
+app.use("/:productId",express.static(path.join(__dirname, 'lib')));
 
 
 app.listen(PORT, () => {
