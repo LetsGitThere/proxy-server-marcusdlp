@@ -2,10 +2,18 @@ const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = 4000;
+
+
+//,amage CORS policy
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
+});
 
 app.use(morgan('dev'));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use("/:productId/reviews",express.static(path.join(__dirname, 'lib')));
+
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
