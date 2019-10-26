@@ -12,13 +12,15 @@
     
     <link rel="shortcut icon" href="#" />
     <script>
-      var URL = window.location.origin.slice(0,55)
+      var temp = window.location.origin.split('.');
+      temp.pop();
+      var URL = temp.join('.')
       var productId = window.location.pathname.split('/')[1];
     </script>
     <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script>
-      document.write("<script src='" + URL + ":4002/" + productId + "/bundle.js'>" + "</scr" + "ipt>");
+      document.write("<script src='" + URL + ".com:4002/" + productId + "/bundle.js'>" + "</scr" + "ipt>");
     </script>
     <script>
       document.write("<script src='" + URL + ":4001/" + productId + "/bundle.js'>" + "</scr" + "ipt>");
