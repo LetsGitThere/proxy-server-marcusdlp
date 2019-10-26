@@ -7,14 +7,30 @@
   </head>
 
   <body>
-    <!-- <div id="product-purchase-component"></div> -->
+    <div id="app"></div>
     <div id="product-reviews-component"></div>
+    
     <link rel="shortcut icon" href="#" />
-
+    <script>
+      var URL = window.location.origin.slice(0,54)
+      var productId = window.location.pathname.split('/')[1];
+    </script>
     <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script>
+      document.write("<script src='" + URL + ":4002/" + productId + "/bundle.js'>" + "</scr" + "ipt>");
+    </script>
+    <script>
+      document.write("<script src='" + URL + ":4001/" + productId + "/bundle.js'>" + "</scr" + "ipt>");
+    </script>
+
+    <script src="http://localhost:4002/:productId/bundle.js"></script>
     <script src="http://localhost:4001/:productId/bundle.js"></script>
+    
 
   </body>
   
 </html>
+
+<!-- window.location.origin.slice(0,17) + "4001/:productId/bundle.js" -->
+<!-- window.location.origin.slice(0,17) + "4002/:productId/bundle.js" -->
