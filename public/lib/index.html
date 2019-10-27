@@ -9,30 +9,24 @@
   <body>
     <div id="app"></div>
     <div id="product-reviews-component"></div>
-    
-    <link rel="shortcut icon" href="#" />
-    <script>
+    <!-- <link rel="shortcut icon" href="#" /> -->
+    <!-- <script>
       var temp = window.location.origin.split('.');
       temp.pop();
       var URL = temp.join('.')
       var productId = window.location.pathname.split('/')[1];
-    </script>
+    </script> -->
     <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script>
       src="http://ec2-18-222-138-175.us-east-2.compute.amazonaws.com:4002/" + productId + "/bundle.js"
     </script>
     <script>
-      document.write("<script src='" + URL + ".com:4001/" + productId + "/bundle.js'>" + "</scr" + "ipt>");
+      // document.write("<script src='" + URL + ".com:4001/" + productId + "/bundle.js'>" + "</scr" + "ipt>");
+      src="http://ec2-52-15-76-218.us-east-2.compute.amazonaws.com:4001/" + productId + "/bundle.js"
     </script>
-
-    <!-- <script src="http://localhost:4002/:productId/bundle.js"></script> -->
-    <!-- <script src="http://localhost:4001/:productId/bundle.js"></script> -->
     
 
   </body>
   
 </html>
-
-<!-- window.location.origin.slice(0,17) + "4001/:productId/bundle.js" -->
-<!-- window.location.origin.slice(0,17) + "4002/:productId/bundle.js" -->
